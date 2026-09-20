@@ -1,0 +1,28 @@
+:root {
+  /* Black with specific opacities */
+  --color-black-highest: rgba(0, 0, 0, 0.90);
+  --color-black-mid: rgba(0, 0, 0, 0.50);
+  --color-black-lowest: rgba(0, 0, 0, 0.10);
+
+  /* Yellow Scale */
+  --color-yellow-100: #FBF3DE;
+  --color-yellow-200: #F6E6BC;
+  --color-yellow-300: #DDAD4C;
+  --color-yellow-400: #C9993B;
+  --color-yellow-500: #B0832F;
+  --color-yellow-600: #8F6A26;
+  --color-yellow-700: #6E511D;
+  --color-yellow-800: #4C3814;
+  --color-yellow-900: #2B1F0B;
+
+  /* Typography */
+  --font-heading: 'Crimson Text', serif;
+  --font-body: 'Source Sans 3', sans-serif;
+
+  /* Radius */
+  --radius-sm: 4px;
+  --radius-md: 8px;
+
+  /* Spacing */
+  --spacing-base: 8px;
+}
