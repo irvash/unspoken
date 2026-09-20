@@ -99,6 +99,8 @@ src/
 - **Never use `!important`.**
 - All colors, spacing, radius, and typography **must come from `DESIGN.md`**. Do not invent values.
 - If a Tailwind class doesn't exist for a design token, use a CSS variable or arbitrary value syntax `[value]` — but ask first.
+- Google Fonts must be loaded via `next/font/google`, not `@import url(...)`.
+- If `@import` is ever used in CSS, it must be the first line of the file — before Tailwind and all other rules.
 
 ## Design Tokens & Tailwind Integration
 
