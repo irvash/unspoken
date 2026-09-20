@@ -1,7 +1,7 @@
 export default function Home() {
   return (
     <main className="min-h-screen">
-      {/* Content area ready for design */}
+      <h1>Pilot Home Page</h1>
     </main>
   );
 }
