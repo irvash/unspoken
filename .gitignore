@@ -1,1 +1,19 @@
-Nothing should be ignored based on the provided file changes, as they only include source files (.css, .js, .md) and no build artifacts, dependencies, or temporary files.
+node_modules/
+.next/
+out/
+build/
+dist/
+
+.env
+.env.local
+.env*.local
+
+.DS_Store
+Thumbs.db
+
+*.log
+npm-debug.log*
+yarn-error.log*
+
+.vercel
+*.tsbuildinfo
