@@ -2,16 +2,6 @@
 name: unspoken-stories
 colors:
   black: "#111111"
-  beige: "#EAE6DD"
-  blue-100: "#E4EBF0"
-  blue-200: "#C6D4DE"
-  blue-300: "#9BB2C4"
-  blue-400: "#6A8BA3"
-  blue-500: "#3E5C76"
-  blue-600: "#334C62"
-  blue-700: "#283C4E"
-  blue-800: "#1A2833"
-  blue-900: "#0D141A"
   yellow-100: "#FBF3DE"
   yellow-200: "#F6E6BC"
   yellow-300: "#DDAD4C"
@@ -48,28 +38,16 @@ components:
     backgroundColor: "{colors.yellow-300}"
     textColor: "{colors.black}"
     rounded: "{rounded.sm}"
-  button-secondary:
-    backgroundColor: "{colors.blue-800}"
-    textColor: "{colors.beige}"
-    rounded: "{rounded.sm}"
-  card:
-    backgroundColor: "{colors.beige}"
-    rounded: "{rounded.none}"
-  nav:
-    backgroundColor: "{colors.blue-900}"
-    textColor: "{colors.beige}"
 ---
 
 ## Overview
 
-Unspoken Stories is a cultural publication celebrating women's contributions across cultures since 1986. The visual identity is editorial, archival, and literary — it should feel like a printed museum journal or a carefully curated archive, not a tech product. Warm parchment tones, deep navy, and mustard gold accents carry the mood.
+Unspoken Stories is a cultural publication celebrating women's contributions across cultures since 1986. The visual identity is editorial, archival, and literary — it should feel like a printed museum journal or a carefully curated archive, not a tech product. Warm parchment tones and mustard gold accents carry the mood.
 
 ## Colors
 
 - **Black (`#111111`)**: Primary text color on light backgrounds. Never use pure `#000000`.
-- **Beige (`#EAE6DD`)**: Default page background. The "paper" of the site.
-- **Blue scale**: Structural color. `blue-900` (`#0D141A`) for header/footer and dark overlays. `blue-800` (`#1A2833`) for secondary dark surfaces. Lighter blues (`blue-100`–`blue-300`) for subtle UI states, dividers, and muted text on dark backgrounds.
-- **Yellow scale**: The accent. `yellow-300` (`#DDAD4C`) is the primary CTA color and the "Unspoken" wordmark highlight. `yellow-400`–`yellow-500` for hover states. Deeper yellows (`yellow-700`+) for text on light backgrounds where contrast requires it.
+- **Yellow scale**: The primary palette. `yellow-100` (`#FBF3DE`) is the default page background (the "paper" of the site). `yellow-300` (`#DDAD4C`) is the primary CTA color and accent. `yellow-400`–`yellow-500` for hover states. Deeper yellows (`yellow-700`+) for text on light backgrounds where contrast requires it.
 - **No other colors** may be introduced. Do not generate new hex values.
 
 ## Typography
@@ -90,7 +68,7 @@ Unspoken Stories is a cultural publication celebrating women's contributions acr
 ## Elevation & Depth
 
 - **No shadows anywhere.** Depth is communicated through color contrast and layout, not drop shadows or elevation.
-- Dark surfaces (`blue-800`, `blue-900`) sit "above" light surfaces (`beige`, `yellow-100`) purely through color contrast.
+- Darker yellow tones sit "above" lighter surfaces purely through color contrast.
 
 ## Shapes
 
@@ -100,10 +78,7 @@ Unspoken Stories is a cultural publication celebrating women's contributions acr
 ## Components
 
 - **Primary button**: `yellow-300` background, `black` text, `4px` radius, no shadow. Includes a right arrow icon (Lucide) when used as a "continue" action.
-- **Secondary button**: `blue-800` background, `beige` text, `4px` radius, no shadow.
-- **Nav**: `blue-900` background, `beige` text. Text-only links. Search icon in a dark square button.
 - **Cards**: No border, no shadow. Image on top, `Crimson Text` heading below, `Source Sans` body excerpt in muted color. Use spacing to separate, not lines or shadows.
-- **Footer**: `blue-900` background, `beige` text, three-column layout (Explore / Connect / Newsletter). Newsletter input is a simple bordered field with a `yellow-300` Subscribe button.
 - **Hero overlay**: Dark gradient overlay on hero image is the *only* exception to the no-gradient rule, used strictly for text legibility.
 
 ## Do's and Don'ts
@@ -124,6 +99,5 @@ Unspoken Stories is a cultural publication celebrating women's contributions acr
 - **No more than one `<h1>` per page.**
 - **No decorative borders around cards.**
 - **No "Lorem Ipsum"** or generic filler text.
-- **No purple/blue "tech startup" gradients or colors** outside the defined palette.
 - **No border radius larger than 8px.** No pill buttons.
 - **No inventing new colors, fonts, or spacing values.** If something isn't defined here, ask before assuming.
