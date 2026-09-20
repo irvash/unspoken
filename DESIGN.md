@@ -49,6 +49,7 @@ Unspoken Stories is a cultural publication celebrating women's contributions acr
 - **Black (`#111111`)**: Primary text color on light backgrounds. Never use pure `#000000`.
 - **Yellow scale**: The primary palette. `yellow-100` (`#FBF3DE`) is the default page background (the "paper" of the site). `yellow-300` (`#DDAD4C`) is the primary CTA color and accent. `yellow-400`–`yellow-500` for hover states. Deeper yellows (`yellow-700`+) for text on light backgrounds where contrast requires it.
 - **No other colors** may be introduced. Do not generate new hex values.
+- **Delivery**: All color tokens are exposed as Tailwind utilities via the `@theme` block in `globals.css` (e.g., `bg-yellow-300`, `text-blue-900`, `border-blue-200`). Use the utility, not the hex value, in components.
 
 ## Typography
 
@@ -57,6 +58,7 @@ Unspoken Stories is a cultural publication celebrating women's contributions acr
 - **No more than these two font families** may appear anywhere in the project.
 - Body text should be comfortable for long reading: 16–18px base size, line-height ~1.6.
 - Headings should feel editorial: tight line-height (~1.1–1.2), generous size hierarchy.
+- **Delivery**: Font families are exposed as Tailwind utilities via the `@theme` block (e.g., `font-heading`, `font-body`). Use the utility, not the raw font name, in components.
 
 ## Layout
 
@@ -64,6 +66,7 @@ Unspoken Stories is a cultural publication celebrating women's contributions acr
 - **Container**: Tailwind defaults. Max content width `1280px`, centered, with responsive horizontal padding.
 - **Grid**: Tailwind's 12-column grid. The archive section uses a 3-column masonry-style layout on desktop, collapsing to 2 columns on tablet and 1 column on mobile.
 - **Breakpoints**: Tailwind defaults (`sm: 640px`, `md: 768px`, `lg: 1024px`, `xl: 1280px`, `2xl: 1536px`).
+- **Delivery**: Spacing follows Tailwind's default scale, anchored to an 8px base. Use Tailwind spacing utilities (`p-4`, `gap-8`, `mt-12`), not arbitrary pixel values.
 
 ## Elevation & Depth
 
@@ -74,6 +77,7 @@ Unspoken Stories is a cultural publication celebrating women's contributions acr
 
 - **Radius scale**: `0px` (default — sharp, editorial), `4px` (small UI elements like buttons and inputs), `8px` (maximum — reserved for cards or larger containers if needed).
 - **Never exceed 8px radius.** No pill buttons, no fully rounded corners.
+- **Delivery**: Radius tokens are exposed as Tailwind utilities via the `@theme` block (e.g., `rounded-none`, `rounded-sm`, `rounded-md`). Use the utility, not raw pixel values.
 
 ## Components
 
@@ -89,6 +93,7 @@ Unspoken Stories is a cultural publication celebrating women's contributions acr
 - Use Lucide (or equivalent real icon set) for all icons.
 - Write real, specific copy. If content isn't ready, use clearly marked placeholders like `[Article title here]`.
 - Default to sharp corners (`0px`) for structural elements.
+- Reference tokens via Tailwind utilities generated from `@theme`, not raw values.
 
 ### Don't
 - **No gradients** (except the hero image legibility overlay).
@@ -101,3 +106,5 @@ Unspoken Stories is a cultural publication celebrating women's contributions acr
 - **No "Lorem Ipsum"** or generic filler text.
 - **No border radius larger than 8px.** No pill buttons.
 - **No inventing new colors, fonts, or spacing values.** If something isn't defined here, ask before assuming.
+- **No arbitrary value syntax** (`bg-[#DDAD4C]`, `text-[14px]`) when a token exists.
+- **No defining design tokens in `:root`** — they belong in Tailwind's `@theme` block in `globals.css`.
