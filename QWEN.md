@@ -100,6 +100,20 @@ src/
 - All colors, spacing, radius, and typography **must come from `DESIGN.md`**. Do not invent values.
 - If a Tailwind class doesn't exist for a design token, use a CSS variable or arbitrary value syntax `[value]` — but ask first.
 
+## Design Tokens & Tailwind Integration
+
+- All design tokens (colors, fonts, radius, spacing) must be defined **once** in `@theme` inside `src/app/globals.css`.
+- **Never define design tokens in `:root`.** They must live in `@theme` so Tailwind recognizes them natively.
+- Use the exact token names from `DESIGN.md`, mapped to Tailwind's expected namespaces:
+  - Colors → `--color-*` (e.g., `--color-yellow-300: #DDAD4C`)
+  - Fonts → `--font-*` (e.g., `--font-heading: "Crimson Text", serif`)
+  - Radius → `--radius-*` (e.g., `--radius-sm: 4px`)
+  - Spacing → `--spacing` (base unit `8px`)
+- In components, use **Tailwind utility classes** generated from these tokens (`bg-yellow-300`, `font-heading`, `rounded-sm`).
+- **Never use arbitrary value syntax** like `bg-[#DDAD4C]` or `text-[14px]` when a token exists.
+- **Never hardcode hex values, font names, or pixel values** inside components.
+- CSS Modules (when used) must reference tokens via `var(--color-*)` or `var(--font-*)`, never raw values.
+
 ## What NOT to Do
 
 - ❌ Do not invent design tokens, colors, fonts, or spacing. Use only what's in `DESIGN.md`.
