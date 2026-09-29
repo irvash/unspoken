@@ -1,4 +1,5 @@
 import './globals.css'
+import NlBadgeHider from './NlBadgeHider'
 
 export const metadata = {
   title: 'Unspoken Stories',
@@ -8,7 +9,10 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body>
+        {children}
+        <NlBadgeHider />
+      </body>
     </html>
   )
 }
